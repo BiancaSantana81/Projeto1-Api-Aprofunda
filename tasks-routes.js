@@ -4,12 +4,12 @@ const { v4: uuidv4, parse } = require('uuid');
 
 let tasks = []; // Array para armazenar as tarefas -> let permite a modificação do array
 
-/* Lista de tarefas */
+/* 1. Lista de tarefas */
 const getTasks = router.get('/tasks', (req, res) => {
     res.status(200).json(tasks);
 });
 
-/* Retorna uma tarefa com base em seu id */
+/* 2. Retorna uma tarefa com base em seu id */
 const getTaskById = router.get('/task/:id', (req, res) => {
     const id = req.params.id;
 
@@ -18,7 +18,7 @@ const getTaskById = router.get('/task/:id', (req, res) => {
     res.status(200).json(task);
 });
 
-/* Cria uma nova tarefa */
+/* 3. Cria uma nova tarefa */
 const createTask = router.post('/create/task', (req, res) => {
     const newTask = {
         id: uuidv4(),
@@ -31,7 +31,7 @@ const createTask = router.post('/create/task', (req, res) => {
     res.status(201).json({message: 'New Task created successfully', newTask});
 });
 
-/* atualiza todos os campos de uma tarefa */
+/* 4. atualiza todos os campos de uma tarefa */
 const updateTask = router.put('/task/update/:id', (req, res) => {
     const id = req.params.id;
 
@@ -46,7 +46,7 @@ const updateTask = router.put('/task/update/:id', (req, res) => {
 
 });
 
-/* atualiza apenas um campo da tarefa */
+/* 5. atualiza apenas um campo da tarefa */
 const updateTaskStatus = router.patch('/task/update/item/:id', (req, res) => {
     const id = req.params.id;
 
@@ -57,7 +57,7 @@ const updateTaskStatus = router.patch('/task/update/item/:id', (req, res) => {
     res.status(200).json({ message: 'Task status updated successfully', task });
 });
 
-/* deleta uma tarefa */
+/* 6. deleta uma tarefa */
 const deleteTask = router.delete('/task/delete/:id', (req, res) => {
     const id = req.params.id;
 

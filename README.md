@@ -36,3 +36,62 @@ Este é um projeto simples de uma API RESTful para gerenciamento de tarefas, cri
 3. Inicie o servidor:
    ```bash
    node server.js
+
+---
+
+## 🧪 Testes realizados
+
+Abaixo estão alguns exemplos de requisições feitas à API usando o ThunderClient.
+
+---
+
+#### 1. ✅ Criar uma nova tarefa
+
+📸 *Requisição POST para `/api/create/task`*
+
+<img src="photoTests/create-task.png" alt="Criar tarefa" width="600"/>
+
+---
+
+#### 2. ✅ Listar todas as tarefas
+
+📸 *Requisição GET para `/api/tasks`*
+
+<img src="photoTests/lista-tarefas.png" alt="Listar tarefas" width="600"/>
+
+---
+
+#### 2. ✅ Get de um item da lista de tarefas
+
+📸 *Requisição GET para `/api/task/:id`*
+
+<img src="photoTests/get-tarefa.png" alt="Listar tarefas" width="600"/>
+
+
+---
+
+#### 3. ✅ Atualizar tarefa
+
+📸 *Requisição PUT para `/api/task/update/:id`*
+
+<img src="photoTests/update-tarefa.png" alt="Atualizar tarefa" width="600"/>
+
+---
+
+#### 4. ✅ Atualizar status da tarefa
+
+📸 *Requisição PATCH para `/api/task/update/item/:id`*
+
+<img src="photoTests/atualizar-campo-tarefa.png" alt="Atualizar status" width="600"/>
+
+---
+
+#### 5. ✅ Deletar tarefa
+
+📸 *Requisição DELETE para `/api/task/delete/:id`*
+
+<img src="photoTests/delete-tarefa.png" alt="Deletar tarefa" width="600"/>
+
+---
+
+
