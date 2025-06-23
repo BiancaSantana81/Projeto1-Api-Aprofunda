@@ -1,0 +1,4 @@
+# Arquivos ignorados pelo Git
+node_modules/
+package-lock.json
+package.json
